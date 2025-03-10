@@ -1,0 +1,1217 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.nav-bar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  padding: 12px 20px;
+  list-style: none;
+  color: white;
+  justify-content: space-around;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+.nav-bar i::after {
+  content: "the Food";
+}
+
+.nav-bar .menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.nav-bar .menu-toggle .bar {
+  width: 30px;
+  height: 4px;
+  background-color: white;
+  margin: 4px 0;
+  transition: 0.3s;
+}
+
+.nav-bar .menu {
+  display: flex;
+}
+
+.nav-bar .menu li {
+  padding-left: 30px;
+}
+
+.nav-bar .menu li a {
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  font-family: "poppins", sans-serif;
+  position: relative;
+}
+
+.menu li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: cyan;
+  transition: 0.15s ease-in-out;
+}
+
+.menu li a:hover::after {
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  @keyframes Icon {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(100px);
+    }
+  }
+  /* Home */
+  .jumbotron-container {
+    width: 100%;
+    height: 500px;
+    margin: 100px auto;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .jumbotron-container img {
+    width: 500px;
+    height: 300px;
+    border-radius: 50px;
+  }
+  .jumbotron-container .text-overlay {
+    font-size: 30px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: 800;
+  }
+  .jumbotron-container .button-overlay {
+    border: 2px solid gray;
+    color: aqua;
+    padding: 15px;
+    overflow: hidden;
+    a {
+      font-size: 20px;
+      text-decoration: none;
+      padding: 10px;
+      color: #706b6b;
+    }
+  }
+  .jumbotron-container .button-overlay:hover {
+    border: 2px solid rgb(55, 49, 237);
+
+    border-radius: 30px;
+    background-color: rgba(31, 119, 243, 0.9);
+    a {
+      color: white;
+    }
+    .icon {
+      animation: Icon 1s ease-in-out forwards;
+    }
+  }
+  article .content-container {
+    width: 80%;
+    height: auto;
+    background-color: rgb(255, 255, 255);
+    margin: 70px auto;
+  }
+  article .content-container .content:nth-child(n) {
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 100px auto;
+    gap: 50px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+  }
+  article .content-container .content img {
+    width: 500px;
+    height: 300px;
+    border-radius: 10px;
+  }
+  article .content-container .content p {
+    font-size: 20px;
+    background-color: rgb(188, 181, 181);
+    padding: 10px;
+    font-family: sans-serif;
+    text-align: center;
+    border-bottom-right-radius: 30px;
+    border-top-left-radius: 30px;
+    letter-spacing: 1px;
+    color: white;
+  }
+  section .container-card {
+    width: 80%;
+    margin: 50px auto;
+    display: flex;
+    height: 500px;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    gap: 50px;
+  }
+  section .container-card .card {
+    text-align: center;
+    padding: 10px;
+  }
+  section .container-card .card i{ color: yellow;}
+  section .container-card .card h4{
+    padding-top: 10px;
+    font-size: 40px;
+    text-transform: uppercase;
+    color: rgb(190, 190, 190);
+    border-bottom: 1px solid black;
+  }
+  section .container-card .card p{
+    padding: 10px;
+    font-size: 20px;
+
+  }
+  /* Home */
+  /* Product */
+  main .container-search{
+    margin: 100px auto;
+    width: 90%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+  
+  }
+  main .container-search .input{
+    padding: 10px;
+    width: 500px;
+    height: 35px;
+    margin: 10px;
+    box-shadow: 5px 5px 5px gray;
+    border: 1px solid gray;
+    outline: none;
+  }
+  main .container-search .input:hover{
+    box-shadow:  5px 5px 5px rgb(254, 254, 24);
+  }
+  main .container-search button{
+    height: 35px;
+    width: 50px;  
+    overflow: hidden;
+    box-shadow: 5px 5px 5px gray;
+    border: none;
+  }
+  main .container-search button:hover{
+    transition: all 200ms ease-in-out;
+    border-radius: 10px;
+    background-color: aquamarine;
+    color: aliceblue;
+    border: 2px solid aliceblue;
+    padding: 0;
+    cursor: pointer;
+    box-shadow: 5px 5px 5px cyan;
+  }
+  main .container-product-food{
+    width:90%;
+    margin: 30px auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    padding: 50px;
+    justify-content: center;
+    align-items: center;
+  }
+  main .container-product-food h2{
+    font-size: 30px;
+    padding: 20px;
+    text-shadow: 5px 10px 5px rgb(132, 132, 132);
+    color: red;
+    border-bottom: 1px solid red;
+    box-shadow: 10px 0px 0px red;
+  }
+  main .container-product-food .product-card{
+    padding: 10px;
+    width: auto;
+    height: auto;
+    border-radius: 10px;
+    border: 2px solid rgb(105, 105, 102);
+    box-shadow: 5px 10px 5px gray;
+  }
+  main .container-product-food .product-card:hover{
+    transform: rotateY(20);
+    border: 2px solid red;
+  }
+  main .container-product-food .product-card img{
+    height: 150px;
+    width: 200px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+  main .container-product-food .product-card .detail-product{
+    height: auto;
+    width: auto;
+    padding: 5px;
+    background-color: white;
+  }
+  main .container-product-food .product-card .detail-product .product-name{
+    font-family:  sans-serif;
+    font-size: 18px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: #acacac;
+  }
+  main .container-product-food .product-card .detail-product .product-price s {
+    font-family: serif;
+    color: red;
+    font-size: 10px;
+    margin: 5px;
+  }
+  main .container-product-food .product-card .detail-product .product-price{
+    margin: 10px;
+    font-family: sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+  }
+  main .container-product-food .product-card .detail-product .product-desc{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  main .container-product-food .product-card .detail-product .button-buy{
+    padding: 5px;
+    border: 1px solid red;
+    color: rgb(240, 17, 17);
+    font-family: 'Times New Roman', Times, serif;
+  }
+  main .container-product-food .product-card .detail-product .button-buy:hover{
+    background-color: #ff0000;
+    transform: scaleX(10px);
+    color: rgb(239, 230, 230);
+    border-radius: 5px;
+    transition: all ease-in-out;
+    cursor: pointer;
+  }
+  main .container-product-drink{
+    width: 90%; 
+    margin: 50px auto;
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    padding: 20px;
+  }
+  main .container-product-drink h2{
+    font-size: 30px;
+    padding: 20px;
+    text-shadow: 5px 10px 5px rgb(132, 132, 132);
+    color: rgb(31, 31, 220);
+    border-bottom: 1px solid rgb(30, 36, 206);
+    box-shadow: 10px 0px 0px rgb(24, 60, 219);
+  }
+  main .container-product-drink .drink-card{
+    width: auto;
+    height: auto;
+    padding: 10px ;
+    border: 3px solid gray;
+    border-radius: 5px;
+    box-shadow: 5px 10px 5px gray;
+  }
+  main .container-product-drink .drink-card:hover{
+    border: 3px solid cyan;
+    transition: all ease-in-out;
+  }
+  main .container-product-drink .drink-card img{
+    height: 150px;
+    width: 200px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+  main .container-product-drink .drink-card .detail-product-drink{
+    height: auto;
+    width: auto;
+    padding: 5px;
+    background-color: white;
+  }  
+  main .container-product-drink .drink-card .detail-product-drink .product-drink{
+    font-family:  sans-serif;
+    font-size: 18px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: #acacac;
+  }
+  main .container-product-drink .drink-card .detail-product-drink .product-drink-price{
+    margin: 10px;
+    font-family: sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+  }
+
+  main .container-product-drink .drink-card .detail-product-drink .product-drink-price s{
+    font-family: serif;
+    color: rgb(27, 15, 198);
+    font-size: 10px;
+    margin: 5px;
+  }
+  main .container-product-drink .drink-card .detail-product-drink .product-desc-drink {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-top: 10px;
+    margin-bottom: 10px; 
+  }
+  main .container-product-drink .drink-card .detail-product-drink .button-buy-drink{
+    padding: 5px;
+    border: 1px solid rgb(43, 160, 255);
+    color: rgb(38, 38, 249);
+    font-family: 'Times New Roman', Times, serif;
+  }
+  main .container-product-drink .drink-card .detail-product-drink .button-buy-drink:hover{
+    background-color: #1a54de;
+    transform: scaleX(10px);
+    color: rgb(239, 230, 230);
+    border-radius: 5px;
+    transition: all ease-in-out;
+    cursor: pointer;
+  }
+  main .contact-container{
+    width: 90%;
+    margin: 100px auto;
+   
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+
+  }
+  main .contact-container .phone{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: auto;
+    padding: 10px;
+    gap: 100px;
+  }
+  main .contact-container .phone img{
+    width: 500px;
+    height: 350px;
+    border-radius: 10px;
+  }
+  main .contact-container .phone  h4{
+    font-size: 50px;
+    border-right: 10px solid black;
+    border-bottom: 2px solid black;
+    padding: 20px;
+  }
+  main .contact-container .email {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: auto;
+    padding: 10px;
+    gap: 50px;
+  }
+  main .contact-container .email img{
+    width: 500px;
+    height: 350px;
+    border-radius: 10px;
+  }
+  main .contact-container .email  h4{
+    font-size: 40px;
+    border-top: 10px solid gray;
+    border-right: 2px solid gray;
+    border-left: 2px solid gray;
+    padding: 30px
+  }
+  main .contact-container .social-media{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: auto;
+    padding: 10px;
+    gap: 50px;
+  }
+  main .contact-container .social-media img{
+    width: 500px;
+    height: 350px;
+    border-radius: 10px;
+  }
+  main .contact-container .social-media .social-media-list{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 300px;
+    justify-content: center;
+    align-items: center;
+  }
+  main .contact-container .social-media .social-media-list .facebook{
+    font-size: 20px;
+    background-color: white;
+    border: 2px solid blue;
+    padding: 10px;
+    
+    a{
+      text-decoration: none;
+      color:blue;
+    }
+  }
+  main .contact-container .social-media .social-media-list .facebook:hover{
+    background-color: blue;
+    border-radius: 10px;
+    padding: 10px;
+    transition: all 200ms ease-in-out;
+    a{
+      text-decoration: none;
+      color: white;
+    }
+  }
+  main .contact-container .social-media .social-media-list .instagram{
+    font-size: 20px;
+    padding: 10px;
+    background-color: white;
+    border: 2px solid rgb(248, 228, 8);
+    a{
+      text-decoration: none;
+      background: rgb(131,58,180);
+      background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);  
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+  main .contact-container .social-media .social-media-list .instagram:hover{
+    border: 2px solid red;
+    border-radius: 5px;
+    transition: all ease-in-out 200ms;
+    background-color: #acacac;
+  }
+  main .contact-container .social-media .social-media-list .twitter{
+    font-size: 20px;
+    width: 100px;
+    height: 40px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid gray;
+    background-color: white;
+    a{
+      text-decoration: none;
+      color: black;
+    }
+  }
+  main .contact-container .social-media .social-media-list .twitter:hover{
+    border: 2px solid black;
+    background-color: black;
+    transition: all ease-in-out 200ms;
+    border-radius: 5px;
+    a{
+      color: white;
+    }
+  }
+  /* Product */
+  /* about */
+  main .container-about{
+    width: 90%;
+    margin:100px auto;
+    height: auto;
+    padding: 30px;
+  }
+  main .container-about h2{
+    text-align: center;
+    margin-top:  30px;
+    margin-bottom: 150px;
+    border-bottom: 2px solid black;
+    padding: 10px;
+    border-top: 2px solid black;
+  }
+  main .container-about .article-about{
+    margin-bottom: 100px;
+    padding: 20px;
+    text-align: center;
+    font-family: sans-serif;
+    border-inline-start: 10px solid black;
+  }
+  main .container-about .article-about p::first-letter{
+    font-size: 50px;
+    font-family: cursive;
+  }
+  main .container-about .visimisi-about{
+    background-color: #acacac;
+    padding: 20px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 150px;
+  }
+  main .container-about .visimisi-about .visi {
+    text-align: center;
+    background-color: white ;
+    padding: 10px;
+    border-radius: 20px;
+  }
+  main .container-about .visimisi-about .visi ul li{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    list-style: none;
+    padding: 5px;
+  }
+  main .container-about .visimisi-about .visi .title-visi{
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 30px;
+    border-bottom: 3px solid gray;
+    color: yellow;
+  }
+  main .container-about .visimisi-about .misi {
+    text-align: center;
+    background-color: white ;
+    padding: 10px;
+    border-radius: 20px;
+  }
+  main .container-about .visimisi-about .misi ul li{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    list-style: none;
+    padding: 5px;
+  }
+  main .container-about .visimisi-about .misi .title-misi{
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 30px;
+    border-bottom: 3px solid gray;
+    color: yellow;
+  }
+  main .container-about .value-proposition{
+    padding: 20px;
+    text-align: center;
+    border-inline-start: 10px solid black;
+    border-inline-end: 10px solid black;
+    background-color: rgba(0, 0, 0, 0.2);
+    margin-bottom: 150px;
+  }
+  main .container-about .value-proposition .question{
+    padding: 10px;
+    font-size: 30px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border-bottom: 4px solid black;
+    margin-bottom: 20px;
+  }
+  main .container-about .value-proposition .question span{
+    font-size: 50px;
+    text-shadow: 10px 10px 10px yellow;
+  }  
+  main .container-about .value-proposition ul li{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    list-style: none;
+  }
+  main .container-about .container-button-contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  main .container-about .container-button-contact a{
+    padding: 10px;
+    background-color: blue;
+    color: white;
+    text-decoration: none;
+    box-shadow: 10px 10px 10px rgb(66, 66, 206);
+    
+  }
+
+
+  /* about */
+}
+
+/* Untuk layar dengan lebar maksimum 768px (tablet dan HP) */
+@media screen and (max-width: 768px) {
+  [data-aos] {
+    transform: none !important; /* Matikan animasi jika perlu */
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(100px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @keyframes Icon {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(100px);
+    }
+  }
+  @keyframes content2 {
+    from{
+      transform: translateX(-100px);
+    }to{
+      transform: translateX(0);
+    }
+  }
+  @keyframes content {
+    from {
+      transform: translateX(400px);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  
+  .fade-in {
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+  }
+  body {
+    background-color: #fcfcfc;
+  }
+
+  .nav-bar .menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #1c1c1ce2;
+    position: absolute;
+    top: 50px;
+    text-align: left;
+    z-index: 1000;
+    overflow: hidden;
+   
+  }
+  .nav-bar .menu li {
+    margin: 5px;
+    
+  }
+
+  .nav-bar .menu-toggle {
+    display: flex;
+  }
+  .nav-bar .menu.active {
+    display: flex;
+  }
+  /* home */
+  main .jumbotron-container {
+    width: auto;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    margin: 100px auto;
+    justify-content: center;
+    align-items: center;
+  }
+  main .jumbotron-container img {
+    display: block;
+    border-radius: 20px;
+  }
+  main .jumbotron-container .text-overlay {
+    position: absolute;
+    font-weight: 700;
+    font-family: "Lora", serif;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0.9;
+    color: white;
+    padding: 10px;
+  }
+  main .jumbotron-container .button-overlay {
+    position: absolute;
+    top: 250px;
+    border: 1px solid rgb(182, 184, 184);
+    padding: 10px;
+    overflow: hidden;
+    color: cyan;
+    a {
+      text-decoration: none;
+      font-family: sans-serif;
+      font-weight: 400;
+      color: white;
+    }
+  }
+  main .jumbotron-container .button-overlay:hover {
+    background-color: rgba(97, 199, 239, 0.9);
+    border-radius: 5px;
+    .icon {
+      animation: Icon 1s ease-in-out forwards;
+    }
+  }
+
+  article .content-container {
+    margin: 70px auto;
+    width: 60% auto;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    gap: 30px;
+    background-color: rgb(81, 79, 77);
+  }
+  article .content-container .content {
+    text-align: center;
+    width: auto;
+    margin: 20px auto;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+  }
+
+  article .content-container .content img {
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  article .content-container .content .text-content {
+    position: absolute;
+    top: 15%;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    overflow: hidden;
+    display: none;
+    font-family: sans-serif;
+  }
+  article .content-container .content:hover .text-content {
+    display: block;
+    opacity: 0.8;
+    animation: content 1s ease-in-out forwards;
+    overflow: hidden;
+  }
+  section .container-card {
+    width: auto;
+    height: auto;
+    margin: 100px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
+  section .container-card .card {
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+  }
+  section .container-card .card i {
+    color: red;
+    padding: 30px;
+    text-shadow: 10px 2px 4px rgb(74, 74, 74);
+  }
+  section .container-card .card h4 {
+    font-family: sans-serif;
+    font-size: 20px;
+    text-transform: uppercase;
+    padding: 5px;
+    text-align: center;
+  }
+  section .container-card .card p {
+    text-align: center;
+    font-family: "poppins" serif;
+    font-weight: 500;
+    color: rgb(83, 80, 80);
+  }
+  /*home*/
+
+  /* product */
+  main .container-search{
+    width: 80%;
+    height: 50px;
+    margin: 100px auto;
+    padding: 10px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+  main .container-search .input{
+    width: 700px;
+    height: 30px;
+    border: none;
+    padding: 12px;
+    border: 1px solid yellow;
+    box-shadow: 4px 4px 4px gray;
+    outline: none;
+  }
+  main .container-search button{
+    height: 30px;
+    width: 70px;
+    padding: 5px;
+    color: rgb(57, 215, 243);
+    background-color: rgb(237, 253, 17);
+    border: 1px gray;
+    border-radius: 2px;
+    box-shadow: 2px 2px 2px gray;
+  }
+  main .container-search button:hover{
+    color: #fcfcfc;
+    background-color: cyan;
+    box-shadow: 2px 2px 2px yellow;
+  }
+  main .container-search .input:hover{
+    box-shadow: 4px 4px 4px yellow;
+    border: 1px solid cyan;
+  }
+  main .container-product-food{
+    width: 90%;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px;
+    height: auto;
+    overflow: hidden;
+  }
+  main .container-product-food h2{
+    background-color: red;
+    padding: 10px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+    text-align: center;
+    color: white;
+  }
+  main .container-product-food .product-card{
+    border: 1px solid rgb(214, 251, 8);
+    border-radius: 10px;
+    width: auto;
+    height: auto;
+    padding: 10px;
+    display: flex;
+    gap: 10px;
+    box-shadow: 5px 5px 5px rgb(205, 204, 204);
+  }
+  main .container-product-food .product-card:hover{
+    border: 1px solid rgb(234, 56, 43);
+    transform: translateY(10px);
+    box-shadow: 5px 5px 5px rgb(235, 64, 52);
+    transition: all 200ms ease-in-out;
+  }
+  main .container-product-food .product-card img{
+    margin-top: auto;
+    margin-bottom: auto;
+    border-radius: 10px;
+  }
+  main .container-product-food .product-card .detail-product{ padding: 10px;  }
+  main .container-product-food .product-card .detail-product .product-name{
+    font-size: 15px;
+    color: yellow;
+    margin: 10px auto;
+  }
+  main .container-product-food .product-card .detail-product .product-price{
+    font-size: 12px;
+    color: rgb(185, 185, 185);
+    margin: 5px auto;
+  }
+  main .container-product-food .product-card .detail-product .product-desc{
+    font-size: 15px;
+    font-family: serif;
+  }
+  main .container-product-food .product-card .detail-product .button-buy{
+    width: auto;
+    margin: 10px auto;
+    height: auto;
+    padding: 5px;
+    color: white;
+    background-color: rgb(238, 95, 87);
+    border: none;
+  }
+  main .container-product-drink{
+    width: 90%;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px;
+    height: auto;
+    overflow: hidden; 
+  }
+
+  main .container-product-drink .drink-card{
+    border: 1px solid rgb(212, 214, 202);
+    border-radius: 10px;
+    width: auto;
+    height: auto;
+    padding: 10px;
+    display: flex;
+    gap: 10px;
+    box-shadow: 5px 5px 5px rgb(205, 204, 204);
+  }
+  main .container-product-drink .drink-card img{
+    margin-top: auto;
+    margin-bottom: auto;
+    border-radius: 10px;
+  }
+  main .container-product-drink .detail-product-drink{ padding: 10px;}
+  main .container-product-drink .detail-product-drink .product-drink{
+    font-size: 15px;
+    color: rgb(68, 189, 249);
+    margin: 10px auto;
+  }
+  main .container-product-drink .detail-product-drink .product-drink-price{
+    font-size: 12px;
+    color: rgb(185, 185, 185);
+    margin: 5px auto;
+  }
+
+  main .container-product-drink .detail-product-drink .product-desc-drink{
+    font-size: 12px;
+    font-family: serif;
+  }
+  main .container-product-drink .detail-product-drink .button-buy-drink{
+    margin: 10px auto;
+    height: auto;
+    padding: 5px;
+    color: white;
+    background-color: rgb(106, 158, 236);
+    border: none;
+  }
+  main .container-product-drink .drink-card:hover{
+    border: 1px solid rgb(43, 218, 234);
+    transform: translateY(10px);
+    box-shadow: 5px 5px 5px rgb(28, 117, 243);
+    transition: all 200ms ease-in-out;
+  }
+  main .container-product-drink h2{
+    text-align: center;
+    padding: 10px;
+    background-color: rgb(17, 95, 249);
+    color: white;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+
+  }
+  /* product */
+ 
+  /* Contact */
+  
+
+ main .contact-container{
+  margin: 100px auto;
+  width: 90%;
+  height: 700px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  justify-content: center;
+  align-items: center;
+ }
+ main .contact-container .phone {
+  
+  padding: 10px;
+  border-bottom: 1px solid gray;  
+ }
+ main .contact-container .phone img{
+  border-radius: 10px;
+  margin-bottom: 20px;
+   box-shadow: 5px 5px 5px gray;
+ }
+ main .contact-container .phone h4 { color: rgb(136, 176, 215); text-align: center;}
+ main .contact-container .phone h4 i{color:  gray; margin-right: 10px;}
+ main .contact-container .email {
+  padding: 10px;
+  border-bottom: 1px solid gray ;
+ }
+ main .contact-container .email img{
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 5px 5px 5px gray; }
+ main .contact-container .email h4{
+  text-align: center;
+  color: #acacac;
+ }
+ main .contact-container .email h4 i{ color: red; margin-right: 10px ;}
+ main .contact-container .social-media {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  
+  padding: 10px;
+  border-bottom: 1px solid gray;
+ }
+ main .contact-container .social-media .social-media-list{
+  display: flex;
+  gap: 10px;
+ }
+ main .contact-container .social-media img{
+  box-shadow: 5px 5px 5px gray; 
+  border-radius: 10px;
+ }
+ main .contact-container .social-media .social-media-list .facebook{
+  background-color: blue;
+  padding: 10px;
+  border-radius: 10px;
+  a{
+    text-decoration: none;
+    color: white
+  }
+ }
+ main .contact-container .social-media .social-media-list .instagram{
+  padding: 10px;
+  background-color: rgb(163, 163, 163);
+  border-radius: 10px;
+  a{
+    background: rgb(131,58,180);
+    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);  
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+ }
+ main .contact-container .social-media .social-media-list .twitter{
+  padding: 10px;
+  background-color: black;
+  border-radius: 5px;
+  a{
+    text-decoration: none;
+    color: white;
+  }
+ }
+  /* Contact */
+
+  /* about */
+ main .container-about{
+  margin: 100px auto;
+  width: 90%;
+  height: auto;
+  padding: 20px;
+}
+
+  main .container-about h2 {
+    text-align: center;
+    border-bottom: 3px solid gray;
+    padding: 5%;
+  }
+  main .container-about .article-about{
+    margin-top: 50px;
+    margin-bottom: 150px;
+    border-left: 5px solid black;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-bottom-left-radius: 10px;
+  }
+  main .container-about .article-about p{
+    font-family: 'Courier New', Courier, monospace;
+  
+  }
+  main .container-about .article-about p::first-letter{
+    font-size: 50px;
+    font-weight: 500;
+  }
+  main .container-about .visimisi-about{
+    margin-bottom: 150px;
+    background-color: black;
+    padding:10px;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    border-top-left-radius: 100px;
+  }
+  main .container-about .visimisi-about .misi{
+    margin-top: 30px;
+    margin-bottom:  30px;
+    padding: 5px;
+  }
+  main .container-about .visimisi-about .misi .title-misi{
+    margin: 10px auto;
+    text-align: center;
+    font-size: 20px;
+    border-bottom: 2px solid white;
+    border-bottom-left-radius: 30px   ;
+  }
+  main .container-about .visimisi-about .misi .title-misi::first-letter{
+    font-size: 50px;
+  }
+  main .container-about .visimisi-about .misi ul li{
+    color: yellow;
+    list-style: none;
+    margin: 25px;
+    border-left: 3px solid gray;
+    padding: 5px;
+  }
+  main .container-about .visimisi-about .visi{
+    margin-top: 30px;
+    margin-bottom:  30px;
+    padding: 5px;
+  }
+  main .container-about .visimisi-about .visi .title-visi{
+    margin: 10px auto;
+    text-align: center;
+    font-size: 20px;
+    border-bottom: 2px solid white;
+    border-bottom-left-radius: 30px   ;
+  }
+  main .container-about .visimisi-about .visi .title-visi::first-letter{
+    font-size: 50px;
+  }
+  main .container-about .visimisi-about .visi ul li{
+    color: yellow;
+    list-style: none;
+    margin: 25px;
+    border-left: 3px solid gray;
+    padding: 5px;
+  }
+  main .container-about .value-proposition {
+    background-color: rgb(176, 176, 172) ;
+    margin-bottom: 150px;
+    padding: 10px;
+  }
+  main .container-about .value-proposition .question {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    width: 90%;
+    border-bottom: 2px solid white;
+  }
+  main .container-about .value-proposition .question span{
+    font-size: 50px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-shadow: 10px 10px 10px black;
+    color: yellow;
+  }
+  main .container-about .value-proposition ul li{
+    list-style: none;
+    margin: 20px;
+    color: aliceblue;
+    font-family: 20px;
+    display: flex;
+  }
+  main .container-about .value-proposition ul li span{
+    font-size: 50px;
+    padding: 2px;
+  }
+  main .container-button-contact{
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  main .container-button-contact a{
+    background-color: #6391fd;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    box-shadow: 5px 5px 5px gray;
+  }
+  
+
+
+
+
+  /* about */
+}
